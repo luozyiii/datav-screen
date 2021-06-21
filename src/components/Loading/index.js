@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './index.less';
 
 export default class Loading extends Component {
   constructor(props) {
@@ -13,17 +14,14 @@ export default class Loading extends Component {
       outsideColor = '#3be6cb',
       insideColor = '#02bcfe',
       duration = 2,
+      content,
     } = this.props;
+    const contentType = typeof content; // string or function
     const outsideColorAnimation = `${outsideColor};${insideColor};${outsideColor}`;
     const insideColorAnimation = `${insideColor};${outsideColor};${insideColor}`;
     return (
       <div className="m-loading">
-        <svg
-          width={width}
-          height={height}
-          viewBox="0 0 50 50"
-          preserveAspectRatio="xMidYmid meet"
-        >
+        <svg width={width} height={height} viewBox="0 0 50 50">
           {/* strokeDasharray = 2pir/4 = 2*3.1415926*22 = 34 */}
           {/* from="0 25 25" to="360 25 25" 等价于 values="0 25 25;360 25 25" */}
           <circle
@@ -75,6 +73,10 @@ export default class Loading extends Component {
             ></animate>
           </circle>
         </svg>
+        {contentType === 'function' && (
+          <div className="content">{content()}</div>
+        )}
+        {contentType === 'string' && <div className="content">{content}</div>}
       </div>
     );
   }
