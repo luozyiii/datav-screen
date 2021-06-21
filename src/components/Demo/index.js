@@ -1,9 +1,0 @@
-import React, { useState, useEffect } from 'react';
-
-export default function (props) {
-  const [state, setState] = useState();
-
-  useEffect(() => {}, []);
-
-  return <div className="top-view">demo 组件</div>;
-}
