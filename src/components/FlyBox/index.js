@@ -27,13 +27,12 @@ export default class FlyBox extends Component {
       starColor = '#4fd2dd',
       starLingth = 100,
       duration = 3,
-      content,
+      children,
     } = this.props;
     const { width, heigth, uuid } = this.state;
     const path = `M5 5 L${width - 5} 5 L${width - 5} ${heigth - 5} L5 ${
       heigth - 5
     } Z`;
-    const contentType = typeof content; // string or function
     const pathId = `fly-box-path-${uuid}`;
     const radiaGradientId = `radial-gradient-${uuid}`;
     const MaskId = `fly-box-mask-${uuid}`;
@@ -77,12 +76,7 @@ export default class FlyBox extends Component {
             mask="url(#fly-box-mask)"
           />
         </svg>
-        {contentType === 'function' && (
-          <div className="fly-box-content">{content()}</div>
-        )}
-        {contentType === 'string' && (
-          <div className="fly-box-content">{content}</div>
-        )}
+        {children && <div className="fly-box-content">{children}</div>}
       </div>
     );
   }

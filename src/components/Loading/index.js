@@ -14,9 +14,8 @@ export default class Loading extends Component {
       outsideColor = '#3be6cb',
       insideColor = '#02bcfe',
       duration = 2,
-      content,
+      children,
     } = this.props;
-    const contentType = typeof content; // string or function
     const outsideColorAnimation = `${outsideColor};${insideColor};${outsideColor}`;
     const insideColorAnimation = `${insideColor};${outsideColor};${insideColor}`;
     return (
@@ -73,10 +72,7 @@ export default class Loading extends Component {
             ></animate>
           </circle>
         </svg>
-        {contentType === 'function' && (
-          <div className="content">{content()}</div>
-        )}
-        {contentType === 'string' && <div className="content">{content}</div>}
+        {children && <div className="content">{children}</div>}
       </div>
     );
   }
