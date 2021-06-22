@@ -8,7 +8,7 @@ export default class TopHeader extends Component {
         {/* <dv-decoration-8 className="header-left-decoration" />
         <dv-decoration-5 className="header-center-decoration" />
         <dv-decoration-8 className="header-right-decoration" reverse /> */}
-        <div className="title">数据大屏-看板</div>
+        <div className="title">数据大屏</div>
       </div>
     );
   }

@@ -28,35 +28,35 @@ export default function IndexPage() {
             <Separator />
           </div>
           <div className="center">
-            <div className="left">
-              <div className="left1">
+            <div className="home-left">
+              <div className="home-left1">
                 <TotalUser
                   todayUser={100}
                   growthLastDay={10}
                   growthLastMonth={30}
                 />
               </div>
-              <div className="left2">
+              <div className="home-left2">
                 <AverageAge />
               </div>
-              <div className="left3">total-device</div>
-              <div className="left4">total-gender</div>
-              <div className="left5">line-chart</div>
-              <div className="left6">bar-chart</div>
+              <div className="home-left3">total-device</div>
+              <div className="home-left4">total-gender</div>
+              <div className="home-left5">line-chart</div>
+              <div className="home-left6">bar-chart</div>
             </div>
-            <div className="right">
-              <div className="right-top1">center-header</div>
-              <div className="right-top2">country-category</div>
-              <div className="right-bottom">
-                <div className="right-left">
-                  <div className="right-left1">earth</div>
-                  <div className="right-left2">country-category</div>
-                  <div className="right-left3">dv-border-box-8</div>
-                  <div className="right-left4">schedule-view</div>
+            <div className="home-right">
+              <div className="home-right-top1">center-header</div>
+              <div className="home-right-top2">country-category</div>
+              <div className="home-right-bottom">
+                <div className="home-right-home-left">
+                  <div className="home-right-home-left1">earth</div>
+                  <div className="home-right-home-left2">country-category</div>
+                  <div className="home-right-home-left3">dv-border-box-8</div>
+                  <div className="home-right-home-left4">schedule-view</div>
                 </div>
-                <div className="right-right">
-                  <div className="right-right1">plan-list</div>
-                  <div className="right-right2">activate-user</div>
+                <div className="home-right-right">
+                  <div className="home-right-right1">plan-list</div>
+                  <div className="home-right-right2">activate-user</div>
                 </div>
               </div>
             </div>

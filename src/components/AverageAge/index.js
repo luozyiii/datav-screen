@@ -1,11 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
+import { useChartHook } from '@/hooks';
 
 import './index.less';
 
 export default function (props) {
   const [startAge, setStartAge] = useState(0);
   const { avgAge = 18 } = props;
+  const chartRef = useRef(null);
+
+  const averageData = [
+    { startValue: 0, value: 1234, axis: 'A', color: 'red' },
+    { startValue: 0, value: 304485, axis: 'B', color: 'blue' },
+    { startValue: 0, value: 3049, axis: 'C', color: 'yellow' },
+    { startValue: 0, value: 30495, axis: 'D', color: 'blue' },
+  ];
+
+  const chartData = [
+    {
+      name: '2021年',
+      type: 'bar',
+      data: [18203, 23489, 29034, 104970, 131744, 630230],
+    },
+  ];
+  const getOptions = (data) => {
+    return {
+      title: {
+        text: '外卖人数分布',
+        subtext: '数据来自网络',
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow',
+        },
+      },
+      legend: {
+        data: ['2021年'],
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true,
+      },
+      xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01],
+      },
+      yAxis: {
+        type: 'category',
+        data: ['广东', '北京', '上海', '杭州', '云南', '中国'],
+      },
+      series: data,
+    };
+  };
+
+  useChartHook(chartRef, getOptions(chartData));
 
   useEffect(() => {}, []);
 
@@ -21,28 +72,30 @@ export default function (props) {
             <CountUp
               start={startAge}
               end={avgAge}
-              duration={1000}
+              duration={100}
               decimals={2}
             />
             <span className="age-unit">岁</span>
           </div>
         </div>
       </div>
-      <div id="average-age-chart" />
+      <div className="average-age-chart" ref={chartRef} />
       <div className="average-data-wrapper">
-        {/* <div className="average-data" v-for="(item, index) in data" :key="index">
-        <div className="average-data-value">
-          <count-to
-            :startVal="item.startValue"
-            :endVal="item.value"
-            :duration="1000"
-          />
-        </div>
-        <div className="average-data-axis">
-          <div className="point" style={{background: 'red'}} />
-          <div className="text">xxx</div>
-        </div>
-      </div> */}
+        {averageData.map((item, index) => (
+          <div className="average-data" key={index}>
+            <div className="average-data-value">
+              <CountUp
+                start={item.startValue}
+                end={item.value}
+                duration={100}
+              />
+            </div>
+            <div className="average-data-axis">
+              <div className="point" style={{ background: `${item.color}` }} />
+              <div className="text">{item.axis}</div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
