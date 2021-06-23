@@ -8,6 +8,7 @@ import {
   TotalUser,
   AverageAge,
   TatolDevice,
+  TotalGender,
 } from '@/components';
 
 import './index.less';
@@ -43,7 +44,9 @@ export default function IndexPage() {
               <div className="home-left3">
                 <TatolDevice />
               </div>
-              <div className="home-left4">total-gender</div>
+              <div className="home-left4">
+                <TotalGender />
+              </div>
               <div className="home-left5">line-chart</div>
               <div className="home-left6">bar-chart</div>
             </div>
