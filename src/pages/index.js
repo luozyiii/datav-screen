@@ -11,6 +11,8 @@ import {
   TotalGender,
   LineChart,
   BarChart,
+  CenterHeader,
+  CountryCategory,
 } from '@/components';
 
 import './index.less';
@@ -18,11 +20,13 @@ import './index.less';
 export default function IndexPage() {
   const [ready, setReady] = useState(false);
   useEffect(() => {
-    setReady(true);
+    setTimeout(() => {
+      setReady(true);
+    }, 2000);
   }, []);
   return (
     <div className="home">
-      {!ready && <Loading>loading...</Loading>}
+      {!ready && <Loading>数据加载中...</Loading>}
       {ready && (
         <Container options={{ width: 3840, height: 2160 }}>
           <div className="header">
@@ -57,8 +61,14 @@ export default function IndexPage() {
               </div>
             </div>
             <div className="home-right">
-              <div className="home-right-top1">center-header</div>
-              <div className="home-right-top2">country-category</div>
+              <div className="home-right-top1">
+                <CenterHeader />
+              </div>
+              <div className="home-right-top2">
+                <CountryCategory
+                  data={['ALL', '北京', '上海', '深圳', '杭州', '南京', '武汉']}
+                />
+              </div>
               <div className="home-right-bottom">
                 <div className="home-right-home-left">
                   <div className="home-right-home-left1">earth</div>

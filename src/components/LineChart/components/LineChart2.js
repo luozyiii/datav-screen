@@ -5,7 +5,7 @@ export default function (props) {
   const chartRef = useRef(null);
 
   const getOptions = (data = []) => {
-    let legendData = ['A', 'B'];
+    let legendData = ['去年骑手月人均接单', '今年骑手月人均接单'];
     const colors = ['rgb(209,248,139)', 'rgb(115,201,245)', 'rgb(124,136,146)'];
     return {
       color: colors,
@@ -44,7 +44,20 @@ export default function (props) {
           axisLabel: {
             fontSize: 16,
           },
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: [
+            '1月',
+            '2月',
+            '3月',
+            '4月',
+            '5月',
+            '6月',
+            '7月',
+            '8月',
+            '9月',
+            '10月',
+            '11月',
+            '12月',
+          ],
         },
         {
           type: 'category',
@@ -82,7 +95,7 @@ export default function (props) {
             width: 2,
           },
           symbol: 'none',
-          data: [5, 100, 70, 120, 80, 15, 200],
+          data: [5, 100, 70, 120, 80, 15, 200, 20, 354, 652, 20, 20],
         },
         {
           name: legendData[1],
@@ -92,7 +105,7 @@ export default function (props) {
             width: 2,
           },
           symbol: 'none',
-          data: [10, 50, 80, 4, 90, 50, 105],
+          data: [10, 50, 80, 4, 90, 50, 105, 30, 69, 306, 919, 566],
         },
       ],
     };

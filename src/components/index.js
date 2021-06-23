@@ -9,3 +9,5 @@ export { default as TatolDevice } from './TatolDevice';
 export { default as TotalGender } from './TotalGender';
 export { default as LineChart } from './LineChart';
 export { default as BarChart } from './BarChart';
+export { default as CenterHeader } from './CenterHeader';
+export { default as CountryCategory } from './CountryCategory';
