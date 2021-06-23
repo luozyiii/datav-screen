@@ -11,7 +11,7 @@ export default function (props) {
 
   return (
     <div className="total-user">
-      <div className="title">慕课外卖用户总数</div>
+      <div className="title">外卖用户总数</div>
       <div className="sub-title">User Total Count</div>
       <div className="total">
         <CountUp

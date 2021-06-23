@@ -5,3 +5,4 @@ export { default as TopHeader } from './TopHeader';
 export { default as Separator } from './Separator';
 export { default as TotalUser } from './TotalUser';
 export { default as AverageAge } from './AverageAge';
+export { default as TatolDevice } from './TatolDevice';

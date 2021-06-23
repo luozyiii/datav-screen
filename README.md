@@ -1,5 +1,5 @@
 # datav-screen
-数据大屏：基于umi + antd + echart, 使用hooks编写。
+数据大屏：基于umi3 + echart, 使用hook或class组件形式编写。
 
 ### react-countup
 简单好用的一个数字滚动插件
