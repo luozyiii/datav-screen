@@ -15,3 +15,4 @@ export { default as ScheduleView } from './ScheduleView';
 export { default as AverageView } from './AverageView';
 export { default as PlanList } from './PlanList';
 export { default as ActivateUser } from './ActivateUser';
+export { default as Timeline } from './Timeline';

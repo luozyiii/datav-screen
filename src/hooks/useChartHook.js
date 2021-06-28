@@ -21,6 +21,7 @@ import {
   GridComponent,
   LegendComponent,
   CalendarComponent,
+  TimelineComponent,
 } from 'echarts/components';
 // 引入 Canvas 渲染器，注意引入 CanvasRenderer 或者 SVGRenderer 是必须的一步
 import { CanvasRenderer } from 'echarts/renderers';
@@ -39,6 +40,7 @@ echarts.use([
   ScatterChart,
   EffectScatterChart,
   CalendarComponent,
+  TimelineComponent,
 ]);
 
 function useChartHook(chartRef, options) {
