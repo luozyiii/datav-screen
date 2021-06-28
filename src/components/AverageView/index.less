@@ -1,0 +1,60 @@
+.average-view {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 0 320px;
+    width: 320px;
+    padding-left: 40px;
+    box-sizing: border-box;
+
+    .title {
+      font-size: 32px;
+    }
+
+    .sub-title {
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+
+    .total {
+      font-family: DIN;
+      font-size: 68px;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      padding: 10px 0;
+    }
+
+    .tiny-title {
+      font-size: 18px;
+      color: #fff;
+      line-height: 36px;
+    }
+
+    .percent-text {
+      font-size: 28px;
+      font-family: DIN;
+      letter-spacing: 2px;
+
+      .percent-text-1 {
+        color: rgb(197, 251, 121);
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    .average-view-chart {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -13,6 +13,10 @@ import {
   BarChart,
   CenterHeader,
   CountryCategory,
+  AverageView,
+  ScheduleView,
+  PlanList,
+  ActivateUser,
 } from '@/components';
 
 import './index.less';
@@ -70,15 +74,27 @@ export default function IndexPage() {
                 />
               </div>
               <div className="home-right-bottom">
-                <div className="home-right-home-left">
-                  <div className="home-right-home-left1">earth</div>
-                  <div className="home-right-home-left2">country-category</div>
-                  <div className="home-right-home-left3">dv-border-box-8</div>
-                  <div className="home-right-home-left4">schedule-view</div>
+                <div className="home-right-left">
+                  <div className="home-right-left1">earth</div>
+                  <div className="home-right-left2">
+                    <CountryCategory
+                      data={['订单量', '销售额', '用户数', '退单量']}
+                    />
+                  </div>
+                  <div className="home-right-left3">
+                    <AverageView />
+                  </div>
+                  <div className="home-right-left4">
+                    <ScheduleView />
+                  </div>
                 </div>
                 <div className="home-right-right">
-                  <div className="home-right-right1">plan-list</div>
-                  <div className="home-right-right2">activate-user</div>
+                  <div className="home-right-right1">
+                    <PlanList />
+                  </div>
+                  <div className="home-right-right2">
+                    <ActivateUser />
+                  </div>
                 </div>
               </div>
             </div>

@@ -11,3 +11,7 @@ export { default as LineChart } from './LineChart';
 export { default as BarChart } from './BarChart';
 export { default as CenterHeader } from './CenterHeader';
 export { default as CountryCategory } from './CountryCategory';
+export { default as ScheduleView } from './ScheduleView';
+export { default as AverageView } from './AverageView';
+export { default as PlanList } from './PlanList';
+export { default as ActivateUser } from './ActivateUser';
