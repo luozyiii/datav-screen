@@ -11,12 +11,12 @@ export default function (props) {
   const chartRef = useRef(null);
 
   const geoGpsMap = {
-    1: [125.8154, 44.2584],
-    2: [125.8154, 44.2584],
-    3: [117.1582, 36.8701],
-    4: [117.1582, 36.8701],
+    1: [116.4551, 40.2539],
+    2: [121.4648, 31.2891],
+    3: [113.12244, 23.009505],
+    4: [110.3893, 19.8516],
     5: [103.9526, 30.7617],
-    6: [103.9526, 30.7617],
+    6: [109.1162, 34.2004],
   };
   const geoCoordMap = {
     江苏: [118.8062, 31.9208],
@@ -286,7 +286,7 @@ export default function (props) {
     ],
   ];
   const colorIndex = 0;
-  const year = ['北京', '上海', '广州', '深圳', '成都', '清远'];
+  const year = ['北京', '上海', '广东', '海南', '成都', '陕西'];
   const mapData = [[], [], [], [], [], []];
   /* 柱子Y名称 */
   const categoryData = [];
@@ -305,13 +305,13 @@ export default function (props) {
       value1: d2[key] / 100,
     });
     mapData[2].push({
-      year: '广州',
+      year: '广东',
       name: key,
       value: d3[key] / 100,
       value1: d3[key] / 100,
     });
     mapData[3].push({
-      year: '深圳',
+      year: '海南',
       name: key,
       value: d3[key] / 100,
       value1: d4[key] / 100,
@@ -323,7 +323,7 @@ export default function (props) {
       value1: d5[key] / 100,
     });
     mapData[5].push({
-      year: '清远',
+      year: '陕西',
       name: key,
       value: d5[key] / 100,
       value1: d6[key] / 100,
@@ -698,7 +698,7 @@ export default function (props) {
   useEffect(() => {
     setTimeout(() => {
       setReady(true);
-    }, 2500);
+    }, 1000);
   }, []);
 
   return (

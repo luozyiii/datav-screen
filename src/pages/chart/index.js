@@ -4,7 +4,7 @@ import { Earth } from '@/components';
 
 export default function (props) {
   return (
-    <div style={{ height: '600px' }}>
+    <div style={{ height: '100vh' }}>
       <Earth />
     </div>
   );
