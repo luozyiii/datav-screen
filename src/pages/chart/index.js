@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import { Timeline } from '@/components';
+import { Earth } from '@/components';
 
 export default function (props) {
   return (
     <div style={{ height: '600px' }}>
-      <Timeline />
+      <Earth />
     </div>
   );
 }

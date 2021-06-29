@@ -22,13 +22,9 @@ export default class FlyBox extends Component {
   }
 
   render() {
-    const {
-      lineColor = '#235fa7',
-      starColor = '#4fd2dd',
-      starLingth = 100,
-      duration = 3,
-      children,
-    } = this.props;
+    const { color, starLingth = 100, duration = 3, children } = this.props;
+    const lineColor = color ? color[0] : '#235fa7'; // 底部线条颜色
+    const starColor = color ? color[1] : '#4fd2dd'; // 流星颜色
     const { width, heigth, uuid } = this.state;
     const path = `M5 5 L${width - 5} 5 L${width - 5} ${heigth - 5} L5 ${
       heigth - 5

@@ -16,7 +16,7 @@ export default function (props) {
 
   const initSize = () => {
     const { width, height } = options; // 指定尺寸的大屏
-    const { clientWidth, clientHeight } = domRef.current; // 容器的大小
+    const { clientWidth, clientHeight } = domRef ? domRef.current : {}; // 容器的大小
     const screen = window.screen;
     const currentWidth = document.body.clientWidth;
     const currentHeight = document.body.clientHeight;

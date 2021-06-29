@@ -16,3 +16,4 @@ export { default as AverageView } from './AverageView';
 export { default as PlanList } from './PlanList';
 export { default as ActivateUser } from './ActivateUser';
 export { default as Timeline } from './Timeline';
+export { default as Earth } from './Earth';

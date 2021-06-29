@@ -17,6 +17,7 @@ import {
   ScheduleView,
   PlanList,
   ActivateUser,
+  Earth,
 } from '@/components';
 
 import './index.less';
@@ -75,14 +76,18 @@ export default function IndexPage() {
               </div>
               <div className="home-right-bottom">
                 <div className="home-right-left">
-                  <div className="home-right-left1">earth</div>
+                  <div className="home-right-left1">
+                    <Earth />
+                  </div>
                   <div className="home-right-left2">
                     <CountryCategory
                       data={['订单量', '销售额', '用户数', '退单量']}
                     />
                   </div>
                   <div className="home-right-left3">
-                    <AverageView />
+                    <FlyBox color={['rgb(66, 68, 70)', 'rgb(251,253,142)']}>
+                      <AverageView />
+                    </FlyBox>
                   </div>
                   <div className="home-right-left4">
                     <ScheduleView />
