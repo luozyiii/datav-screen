@@ -19,8 +19,8 @@ export default function (props) {
     let clientWidth, clientHeight;
     if (domRef) {
       // 容器的大小
-      clientWidth = domRef.current.clientWidth;
-      clientHeight = domRef.current.clientHeight;
+      clientWidth = domRef.current?.clientWidth;
+      clientHeight = domRef.current?.clientHeight;
     }
     const screen = window.screen;
     const currentWidth = document.body.clientWidth;
